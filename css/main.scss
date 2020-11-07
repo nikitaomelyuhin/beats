@@ -1,0 +1,27 @@
+$containerWidth: 940px;
+$baseFontSize: 18px;
+
+//colors
+
+$red: #e01f3d;
+$darkRed: #ca1b36;
+
+//normalize
+
+@import "./layout/normalize.css";
+
+//setups
+
+@import "https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap";
+@import "./layout/base.scss";
+
+//components
+
+@import "./components/hero.scss";
+@import "./components/header.scss";
+@import "./components/logo.scss";
+@import "./components/menu.scss";
+@import "./components/contact-phone.scss";
+@import "./components/btn.scss";
+@import "./components/features.scss";
+@import "./components/feature.scss";

@@ -1,0 +1,73 @@
+html,
+body {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: $baseFontSize;
+  font-family: 'Play', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.42;
+  color: #666;
+  position: relative;
+}
+
+.wrapper {
+  overflow: hidden;
+  width: 100%;
+  min-width: $containerWidth + 20px;
+  min-height: 100%;
+}
+
+.container {
+  width: $containerWidth;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style-type: none;
+  }
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

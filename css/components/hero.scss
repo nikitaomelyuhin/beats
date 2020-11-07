@@ -1,0 +1,35 @@
+.hero {
+  height: 100vh;
+  min-height: 650px;
+  background-color: #f5f5f5;
+  padding: 25px 0 35px;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  background: url('/img/hero-bg.png') right center / 53% auto no-repeat;
+}
+
+.hero__title-section {
+  width: 46%;
+}
+
+.hero__title {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #000;
+  flex-shrink: 0;
+  margin-bottom: 32px;
+}
+
+.hero__subtitle {
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 40px;
+  padding-right: 21%;
+}
