@@ -361,7 +361,7 @@ img {
   object-fit: cover; }
 
 .form-section {
-  background: url(/img/form-bg.png) center center/100% 100% no-repeat; }
+  background: url(../img/form-bg.png) center center/100% 100% no-repeat; }
 
 .form {
   display: flex;
