@@ -1,0 +1,53 @@
+.radio {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  margin-right: 20px;
+}
+
+.radio__elem {
+  display: none;
+
+  &:checked ~ .radio__visible {
+    &:before {
+      display: block;
+    }
+  }
+}
+
+.radio__visible {
+  width: 26px;
+  height: 26px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 8px;
+
+  &:before {
+    content: '';
+    width: 13px;
+    height: 13px;
+    background: $red;
+    position: absolute;
+    border-radius: 50%;
+    display: none;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+}
+
+.radio__title {
+  color: #fff;
+}
+
+.radio--checkbox {
+  .radio__visible {
+    border-radius: 0;
+
+    &:before {
+      border-radius: 0;
+    }
+  }
+}

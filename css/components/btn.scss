@@ -7,6 +7,11 @@
   border-radius: 100px;
   display: inline-flex;
   transition: 0.2s linear;
+  outline: none;
+
+  &--theme--grey {
+    color: #999;
+  }
 
   &--theme--red {
     background-color: $red;

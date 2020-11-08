@@ -1,7 +1,6 @@
 .section {
   height: 100vh;
-  min-height: 650px;
-}
+  min-height: 650px; }
 
 .section__title {
   font-size: 48px;
@@ -10,9 +9,8 @@
   color: #000;
   text-transform: uppercase;
   margin-bottom: 60px;
-  text-align: center;
+  text-align: center; }
+  .section__title--theme--white {
+    color: #fff; }
 
-  &--theme--white {
-    color: #fff;
-  }
-}
+/*# sourceMappingURL=section.css.map */

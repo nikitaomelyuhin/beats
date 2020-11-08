@@ -75,10 +75,12 @@
   height: 80px;
   border-radius: 50%;
   border: 6px solid transparent;
+  position: relative;
   
   &--active {
     border-color: $red;
   }
+
 }
 
 .review__switcher-img {

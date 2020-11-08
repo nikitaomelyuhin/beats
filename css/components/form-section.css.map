@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,aAAc;EACZ,UAAU,EAAE,uDAAyD",
+"sources": ["form-section.scss"],
+"names": [],
+"file": "form-section.css"
+}
