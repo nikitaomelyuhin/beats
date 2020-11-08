@@ -27,6 +27,10 @@ body {
 .container {
   width: $containerWidth;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 ul {
@@ -56,6 +60,10 @@ h5,
 h6 {
   margin: 0;
   font-weight: normal;
+}
+
+p {
+  margin: 0;
 }
 
 table {

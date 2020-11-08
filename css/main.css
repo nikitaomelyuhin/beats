@@ -29,6 +29,10 @@ body {
 .container {
   width: 940px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 ul {
@@ -58,6 +62,10 @@ h5,
 h6 {
   margin: 0;
   font-weight: normal;
+}
+
+p {
+  margin: 0;
 }
 
 table {
@@ -172,6 +180,7 @@ img {
   padding: 14px 40px;
   border-radius: 100px;
   display: inline-flex;
+  transition: 0.2s linear;
 }
 .btn--theme--red {
   background-color: #e01f3d;
@@ -200,4 +209,131 @@ img {
   font-size: 16px;
   color: #000;
   margin-left: 5px;
+}
+
+.section {
+  height: 100vh;
+  min-height: 650px;
+}
+
+.section__title {
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.benefits-section__title {
+  margin-bottom: 8px;
+}
+
+.benefits-section__subtitle {
+  text-align: center;
+  padding: 0 15%;
+  margin-bottom: 56px;
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 44px;
+  position: relative;
+}
+.benefit:after {
+  content: url(../img/circles.png);
+  position: absolute;
+  right: -33.5px;
+  top: 20%;
+}
+.benefit:first-child {
+  padding-left: 0;
+}
+.benefit:last-child {
+  padding-right: 0;
+}
+.benefit:last-child:after {
+  display: none;
+}
+
+.benefit__icon-wrap {
+  height: 126px;
+  width: 126px;
+  border-radius: 50%;
+  background-color: #f5f5f5;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.benefit__icon {
+  width: 62px;
+  height: 62px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.benefit__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.benefit__text {
+  font-size: 16px;
+}
+
+.team-section__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  text-align: center;
+}
+
+.team-member__avatar {
+  width: 220px;
+  height: 290px;
+  overflow: hidden;
+  margin-bottom: 22px;
+}
+
+.team-member__pic {
+  position: relative;
+  top: -40px;
+  left: 0px;
+  width: 100%;
+  height: 160%;
+  object-fit: cover;
+}
+
+.team-member__title {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 8px;
+}
+
+.team-member__subtitle {
+  color: #281e1e;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.team-member__text {
+  font-size: 16px;
 }

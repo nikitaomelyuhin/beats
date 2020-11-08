@@ -6,6 +6,7 @@
   padding: 14px 40px;
   border-radius: 100px;
   display: inline-flex;
+  transition: 0.2s linear;
 
   &--theme--red {
     background-color: $red;
