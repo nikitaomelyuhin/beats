@@ -145,6 +145,9 @@ img {
   width: 42px;
   height: 42px; }
 
+.logo__img {
+  fill: #e01f3d; }
+
 .menu {
   display: flex;
   justify-content: center;
