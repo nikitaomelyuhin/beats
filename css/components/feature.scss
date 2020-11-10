@@ -5,12 +5,12 @@
 }
 
 .feature__icon {
-  width: 46px;
-  height: 44px;
+  width: rem(46px);
+  height: rem(44px);
 }
 
 .feature__text {
-  font-size: 16px;
+  font-size: rem(16px);
   color: #000;
-  margin-left: 5px;
+  margin-left: rem(5px);
 }

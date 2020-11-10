@@ -2,4 +2,9 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
+
+  @include phones {
+    flex-direction: column;
+    text-align: left;
+  }
 }

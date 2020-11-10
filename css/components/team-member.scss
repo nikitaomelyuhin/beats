@@ -2,21 +2,21 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 220px;
+  width: rem(220px);
   text-align: center;
 }
 
 .team-member__avatar {
-  width: 220px;
-  height: 290px;
+  width: rem(220px);
+  height: rem(290px);
   overflow: hidden;
-  margin-bottom: 22px;
+  margin-bottom: rem(22px);
 }
 
 .team-member__pic {
   position: relative;
-  top: -40px;
-  left: 0px;
+  top: rem(-40px);
+  left: rem(0px);
   width: 100%;
   height: 160%;
   object-fit: cover;
@@ -25,15 +25,15 @@
 .team-member__title {
   font-weight: bold;
   color: #000;
-  margin-bottom: 8px;
+  margin-bottom: rem(8px);
 }
 
 .team-member__subtitle {
   color: #281e1e;
-  font-size: 16px;
-  margin-bottom: 8px;
+  font-size: rem(16px);
+  margin-bottom: rem(8px);
 }
 
 .team-member__text {
-  font-size: 16px;
+  font-size: rem(16px);
 }

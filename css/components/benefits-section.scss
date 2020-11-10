@@ -1,9 +1,13 @@
 .benefits-section__title {
-  margin-bottom: 8px;
+  margin-bottom: rem(8px);
 }
 
 .benefits-section__subtitle {
   text-align: center;
   padding: 0 15%;
-  margin-bottom: 56px;
+  margin-bottom: rem(56px);
+
+  @include phones {
+    padding: 0 5%;
+  }
 }

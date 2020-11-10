@@ -2,15 +2,22 @@
   display: flex;
   justify-content: center;
   flex: 1;
+  margin: 0 rem(10px);
+
+  @include tablets {
+    display: none;
+  }
 }
 
 
 .menu__list {
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .menu__item {
-  margin: 0 14px;
+  margin: 0 rem(14px);
 
   &:first-child {
     margin-left: 0;
@@ -24,5 +31,6 @@
 .nav-menu__link {
   color: #000;
   text-decoration: none;
-  font-size: 16px;
+  font-size: rem(16px);
+  white-space: nowrap;
 }

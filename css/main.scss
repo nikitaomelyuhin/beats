@@ -1,10 +1,19 @@
 $containerWidth: 940px;
 $baseFontSize: 18px;
 
+//breakpoints
+
+$tablets: 768px;
+$phones: 480px;
+
 //colors
 
 $red: #e01f3d;
 $darkRed: #ca1b36;
+
+//media
+
+@import "./components/media.scss";
 
 //normalize
 
@@ -21,6 +30,7 @@ $darkRed: #ca1b36;
 @import "./components/header.scss";
 @import "./components/logo.scss";
 @import "./components/menu.scss";
+@import "./components/hamburger.scss";
 @import "./components/contact-phone.scss";
 @import "./components/btn.scss";
 @import "./components/features.scss";

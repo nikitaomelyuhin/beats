@@ -1,16 +1,20 @@
 .btn {
-  font-size: 16px;
+  font-size: rem(16px);
   font-weight: bold;
   text-transform: uppercase;
   color: #fff;
-  padding: 14px 40px;
-  border-radius: 100px;
+  padding: rem(14px) rem(40px);
+  border-radius: rem(100px);
   display: inline-flex;
   transition: 0.2s linear;
   outline: none;
 
   &--theme--grey {
     color: #999;
+
+    &:hover {
+      color: $red;
+    }
   }
 
   &--theme--red {
