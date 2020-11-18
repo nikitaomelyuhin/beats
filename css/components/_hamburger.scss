@@ -1,0 +1,40 @@
+.hamburger, .hamburger--close {
+  display: none;
+  height: 24px;
+  width: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include tablets {
+    display: inline-flex;
+  }
+}
+
+.hamburger--close {
+  display: flex;
+}
+
+.hamburger__plank {
+  display: block;
+  position: relative;
+  height: 4px;
+  background-color: #000;
+  border-radius: 10px;
+}
+
+.hamburger--close {
+  
+  .hamburger__plank--top{
+    transform: rotate(45deg); 
+    bottom: -10px; 
+    width: 30px;
+  }
+  .hamburger__plank--middle{
+    opacity: 0;
+  }
+  .hamburger__plank--bot{
+    transform: rotate(-45deg); 
+    top: -10px; 
+    width: 30px;
+  }
+}

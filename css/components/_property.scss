@@ -1,0 +1,38 @@
+.property {
+  opacity: 0;
+  position: absolute;
+  width: rem(270px);
+  background: rgba(255, 255, 255, .98);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  left: -99999px;
+  top: 0;
+  cursor: auto;
+  transition: opacity .4s linear;
+}
+
+.slide__properties-icon {
+  transform: rotate(0deg);
+  transition: .3s linear;
+}
+
+.property__row {
+  display: flex;
+  justify-content: space-between;
+  margin: rem(20px);
+}
+
+.property__img {
+  width: rem(34px);
+  height: rem(34px);
+}
+
+.property__pic {
+  width: 100%;
+  height: 100%;
+}
+
+.property__option, .property__value {
+  color: #000;
+}

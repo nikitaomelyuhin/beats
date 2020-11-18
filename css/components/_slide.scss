@@ -1,0 +1,138 @@
+.slide {
+  display: inline-flex;
+  position: relative;
+  right: 0;
+  transition: right .3s;
+  width: 100%;
+}
+
+.slide__wrap {
+  min-width: 100%;
+  max-width: $containerWidth;
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: space-between;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+
+.slide__img {
+  width: 50%;
+  height: auto;
+  overflow: hidden;
+  margin-right: rem(10px);
+
+  @include tablets {
+    width: rem(320px);
+    height: rem(320px);
+    margin-bottom: rem(40px);
+  }
+}
+
+.slide__desc {
+  display: flex;
+  flex-direction: column;
+  width: rem(420px);
+  padding: rem(15px);
+
+  @include tablets {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+.slide__properties {
+  position: relative;
+  width: rem(90px);
+  height: rem(90px);
+  background-color: #6e6e6e;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: rem(36px);
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.slide__properties--active {
+
+  .slide__properties-icon {
+    transform: rotate(180deg);
+    fill: $red;
+    transition: .3s linear;
+  }
+  
+  .property {
+    opacity: 1;
+    left: rem(90px);
+    top: 0;
+    transition: opacity .3s linear;
+  }
+}
+
+.slide__properties-icon {
+  width: rem(35px);
+  height: rem(35px);
+  fill: #fff;
+}
+
+.slide__title {
+  font-size: rem(36px);
+  line-height: 1.2;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  margin-bottom: rem(20px);
+}
+
+.slide__text {
+  font-size: rem(16px);
+  margin-bottom: rem(45px);
+}
+
+.slide__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: rem(60px);
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.slide__item {
+  margin-right: rem(90px);
+  font-size: rem(16px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.slide__item-text {
+  font-weight: bold;
+  color: #000;
+}
+
+.slide__cost-block {
+  display: flex;
+  align-items: center;
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.slide__cost {
+  margin-right: rem(24px);
+  font-size: rem(36px);
+  color: #000;
+}

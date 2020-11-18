@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,SAAU;EACR,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,UAAU,EAAE,MAAM",
-"sources": ["benefits.scss"],
-"names": [],
-"file": "benefits.css"
-}
