@@ -2,6 +2,7 @@
   height: 100vh;
   min-height: rem(650px);
   padding: rem(25px) 0 rem(35px);
+  position: relative;
 
   @include tablets {
     height: 100%;

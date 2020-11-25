@@ -1,3 +1,38 @@
 .form-section {
   background: url(../img/form-bg.png) center center / 100% 100% no-repeat;
 }
+
+.form-section__modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(00, 00, 00, .5);
+}
+
+.form-section__modal-container {
+  display: flex;
+  margin: auto;
+  background-color: #fff;
+  padding: rem(20px);
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.form-section__modal-content {
+  margin-bottom: rem(10px);
+  text-align: center;
+}
+
+.fancybox-content {
+  display: inline-flex !important;
+}
+
+.error-modal {
+  color: $red;
+}

@@ -20,16 +20,21 @@
 }
 
 .slide__img {
-  width: 50%;
-  height: auto;
+  max-width: 50%;
   overflow: hidden;
+  border-radius: 50%;
   margin-right: rem(10px);
 
   @include tablets {
-    width: rem(320px);
+    max-width: rem(320px);
     height: rem(320px);
     margin-bottom: rem(40px);
   }
+}
+
+
+.slide__pic {
+  min-width: 100%;
 }
 
 .slide__desc {
@@ -69,7 +74,7 @@
     fill: $red;
     transition: .3s linear;
   }
-  
+
   .property {
     opacity: 1;
     left: rem(90px);
@@ -135,4 +140,5 @@
   margin-right: rem(24px);
   font-size: rem(36px);
   color: #000;
+  white-space: nowrap;
 }

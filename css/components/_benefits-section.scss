@@ -1,3 +1,18 @@
+.benefits-section {
+
+  &:before {
+    content: '';
+    display: block;
+    border: rem(18px) solid transparent;
+    border-bottom: rem(28px) solid $red;
+    transform: rotate(-15deg);
+    position: absolute;
+    left: 10%;
+    bottom: rem(-10px);
+    z-index: 1;
+  }
+}
+
 .benefits-section__title {
   margin-bottom: rem(8px);
 }
