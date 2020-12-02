@@ -1,0 +1,13 @@
+.contacts {
+  margin-right: rem(20px);
+}
+
+.contacts__adress {
+  color: #000;
+}
+
+.contacts__contact-phone {
+  @include tablets {
+    display: flex;
+  }
+}

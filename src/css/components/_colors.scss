@@ -4,14 +4,13 @@
   right: 0;
   display: flex;
   height: 100%;
-  margin-left: 30%;
+  margin-left: 40%;
 
   @include tablets {
     margin-left: 0;
     z-index: 3;
   }
 }
-
 
 .colors__item {
   display: flex;
@@ -26,7 +25,7 @@
   flex-shrink: 0;
   cursor: pointer;
   user-select: none;
-
+  
   &--theme--grey {
     background-color: #999;
   }
@@ -35,6 +34,10 @@
   }
   &--theme--red {
     background-color: $red;
+  }
+
+  @include phones {
+    width: rem(80px);
   }
 }
 
@@ -59,4 +62,7 @@
 .colors__item-text--active {
   padding: rem(30px) rem(20px);
   width: 100%;
+
+  @include phones {
+  }
 }

@@ -52,11 +52,13 @@
   border-bottom: 6px solid $red;
   top: 20%;
   right: -15%;
+  transition: .1s linear;
 }
 
 .team-member__content {
   height: 0;
   overflow: hidden;
+  transition: .2s ease-in-out;
 }
 
 
@@ -65,6 +67,7 @@
   .team-member__triangle {
     transform: rotate(180deg);
     top: 40%;
+    transition: .1s linear;
   }
 }
 
@@ -81,4 +84,5 @@
 .team-member__title-wrap--active + .team-member__content {
   height: 100%;
   overflow: visible;
+  transition: .2s ease-in-out;
 }

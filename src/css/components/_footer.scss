@@ -1,0 +1,10 @@
+.footer {
+  padding: rem(30px);
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

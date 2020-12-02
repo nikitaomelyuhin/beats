@@ -1,31 +1,4 @@
-//hamburger
 
-// const hamburgerElement = document.querySelector(".hamburger");
-// const hamburgerPlankElement = document.querySelector(".hamburger__plank");
-// const topPlankElement = document.querySelector(".hamburger__plank--top");
-// const middlePlankElement = document.querySelector(".hamburger__plank--middle");
-// const botPlankElement = document.querySelector(".hamburger__plank--bot");
-// const menuElement = document.querySelector(".menu");
-// const container = document.querySelector(".container")
-// var containerWidth = window.getComputedStyle(container).maxWidth;
-
-// var widthElement = parseInt(containerWidth);
-
-// hamburgerElement.addEventListener("click", function (e) {
-//   e.preventDefault();
-
-//   hamburgerElement.classList.toggle("hamburger--close");
-
-//   if (hamburgerElement.classList.contains("hamburger--close")) {
-//     menuElement.style.display = "flex";
-//   } else {
-//     menuElement.style.display = "";
-//   }
-
-// })
-
-
-$(document).ready(function () {
   $(".hamburger").on("click", function (e) {
     e.preventDefault();
     $(".hamburger").toggleClass("hamburger--close");
@@ -41,28 +14,26 @@ $(document).ready(function () {
       $(".container").css("width", "");
       $("body").css("overflow", "");
     }
-
   })
 
-});
 
 // slider-property-popup
 
-const propertyElement = document.querySelectorAll(".slide__properties");
-const propertyBlockElement = document.querySelector(".property");
+// const propertyElement = document.querySelectorAll(".slide__properties");
+// const propertyBlockElement = document.querySelector(".property");
 
 
-for (let i = 0; i < propertyElement.length; i++) {
+// for (let i = 0; i < propertyElement.length; i++) {
 
 
-  var elem = propertyElement[i];
+//   var elem = propertyElement[i];
 
 
-  elem.addEventListener("click", function (e) {
-    e.target.classList.toggle("slide__properties--active");
+//   elem.addEventListener("click", function (e) {
+//     e.target.classList.toggle("slide__properties--active");
 
-  })
-}
+//   })
+// }
 
 
 // propertyElement.forEach(item => {
@@ -73,14 +44,14 @@ for (let i = 0; i < propertyElement.length; i++) {
 
 
 
-// $(document).ready(() => {
+$(document).ready(() => {
 
-//   $(".slide__properties").on("click", function () {
-//     $(this).toggleClass("slide__properties--active");
-//   })
+  $(".slide__properties").on("click", function () {
+    $(this).toggleClass("slide__properties--active");
+  })
 
 
-// })
+})
 
 //slider 
 
@@ -296,24 +267,24 @@ $(document).ready(() => {
           to: to.val()
         }
       });
-    
-    request.done((data) => {
-      content.text(data.message);
-    });
 
-    request.fail((data) => {
-      const message = data.responseJSON.message;
-      content.text(message)
-      modal.addClass("error-modal");
-    });
-
-    request.always(() => {
-      $.fancybox.open({
-        src: "#form-modal",
-        type: "inline",
+      request.done((data) => {
+        content.text(data.message);
       });
-    });
-  }
+
+      request.fail((data) => {
+        const message = data.responseJSON.message;
+        content.text(message)
+        modal.addClass("error-modal");
+      });
+
+      request.always(() => {
+        $.fancybox.open({
+          src: "#form-modal",
+          type: "inline",
+        });
+      });
+    }
   });
 
   $(".js-submit-btn").on("click", (e) => {
@@ -329,13 +300,76 @@ $(document).ready(() => {
 
 
 $(".colors__item-title-wrap").on("click", (e) => {
-  
+
   const $this = $(e.currentTarget);
-  
-  
-  
+
   $this.next().toggleClass("colors__item-text--active");
-  
+
   $(".colors__item-text").not($this.next()).removeClass("colors__item-text--active");
-  
+
 });
+
+
+  $(".colors__item-title-wrap").on("click", function(e) {
+    if($(window).width() < 480 && $(".colors__item-text").hasClass("colors__item-text--active")) {
+      $(".colors__item").not(this.closest(".colors__item")).css("display", "none");
+    } else {
+      $(".colors__item").css("display", "");
+    }
+
+
+  });
+
+
+//player 
+
+let player;
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('yt-player', {
+    height: '400',
+    width: '660',
+    videoId: '20Ap1kH8wuU',
+    events: {
+      // 'onReady': onPlayerReady,
+      // 'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+
+
+//map
+
+let myMap;
+const init = () => {
+  myMap = new ymaps.Map("map", {
+    center: [59.93916998692174, 30.309015096732622],
+    zoom: 11,
+    controls: [],
+  });
+
+  let coords = [
+      [59.94554327989287, 30.38935262114668],
+      [59.91142323563909, 30.50024587065841],
+      [59.88693161784606, 30.319658102103713],
+      [59.97033574821672, 30.315194906302924],
+    ],
+    myCollection = new ymaps.GeoObjectCollection({}, {
+      draggable: false,
+      iconLayout: 'default#image',
+      iconImageHref: '../img/icons/map.svg',
+      iconImageSize: [46, 57],
+      iconImageOffset: [-35, -52]
+    });
+
+  for (let i = 0; i < coords.length; i++) {
+    myCollection.add(new ymaps.Placemark(coords[i]));
+  }
+
+  myMap.geoObjects.add(myCollection);
+
+  myMap.behaviors.disable('scrollZoom');
+};
+
+ymaps.ready(init);
