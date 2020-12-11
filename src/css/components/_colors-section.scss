@@ -1,13 +1,11 @@
 .colors-section {
   background-color: #000;
   padding: 0;
+  display: flex;
   position: relative;
+  height: 100vh;
+  min-height: 650px;
 
-  .container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
   &:before {
     content: '';
     position: absolute;
@@ -19,13 +17,16 @@
     background-size: cover;
   }
 
-  .section__title {
+  &__title {
     align-self: flex-start;
-    margin-top: rem(55px);
+    margin: rem(55px) 0 0 rem(55px);
     z-index: 2;
 
     @include tablets {
       z-index: 2;
+      margin: rem(40px) 0 0 rem(30px);
+      font-size: rem(36px);
+      
     }
 
   }

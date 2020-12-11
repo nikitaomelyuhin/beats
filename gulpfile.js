@@ -38,7 +38,7 @@ task('copy:html', () => {
 })
 
 task('copy:img', () => {
-  return src(['src/img/**/*.jpg', 'src/img/**/*.png'])
+  return src(['src/img/**/*.jpg', 'src/img/**/*.png', 'src/img/**/*.svg'])
     .pipe(dest('dist/img'))
     .pipe(reload({
       stream: true
@@ -47,11 +47,13 @@ task('copy:img', () => {
 
 const styles = [
   'node_modules/normalize.css/normalize.css',
+  // 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css',
   'src/css/main.scss'
 ];
 
 const libs = [
   'node_modules/jquery/dist/jquery.js',
+  'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
   'src/scripts/*.js'
 ];
 
@@ -75,13 +77,13 @@ task('styles', () => {
 
 task('scripts', () => {
   return src(libs)
-    // .pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(concat('main.min.js'))
     // .pipe(babel({
     //   presets: ['@babel/env']
     // }))
     // .pipe(uglify())
-    // .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write())
     .pipe(dest('dist'))
     .pipe(reload({
       stream: true
@@ -122,5 +124,6 @@ watch('./src/scripts/*.js', series('scripts'));
 watch('./src/img/icons/*.svg', series('icons'));
 watch('./src/img/**/*.jpg', series('copy:img'));
 watch('./src/img/**/*.png', series('copy:img'));
+watch('./src/img/**/*.svg', series('copy:img'));
 
 task('default', series('clean', 'copy:html', 'copy:img', 'styles', 'scripts', 'icons', 'server'));

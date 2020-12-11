@@ -22,6 +22,7 @@
     "@babel/core": "^7.12.9",
     "@babel/preset-env": "^7.12.7",
     "browser-sync": "^2.26.13",
+    "fancybox": "^3.0.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
@@ -38,7 +39,7 @@
     "node-sass": "^5.0.0"
   },
   "dependencies": {
-    "fancybox": "^3.0.1",
+    "@fancyapps/fancybox": "^3.5.7",
     "jquery": "^3.5.1",
     "normalize.css": "^8.0.1"
   }

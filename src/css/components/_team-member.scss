@@ -13,7 +13,7 @@
 .team-member__avatar {
   position: relative;
   width: 100%;
-  min-height: rem(290px);
+  height: rem(290px);
   overflow: hidden;
   margin-bottom: rem(22px);
 
@@ -24,10 +24,9 @@
 }
 
 .team-member__pic {
-  position: absolute;
   min-height: 100%;
   object-fit: cover;
-
+  
   @include tablets {
   }
 }
@@ -58,7 +57,12 @@
 .team-member__content {
   height: 0;
   overflow: hidden;
-  transition: .2s ease-in-out;
+  transition: .6s;
+  opacity: 0;
+  @include tablets {
+    opacity: 0;
+    transition: .6s;
+  }
 }
 
 
@@ -67,7 +71,7 @@
   .team-member__triangle {
     transform: rotate(180deg);
     top: 40%;
-    transition: .1s linear;
+    transition: .4s;
   }
 }
 
@@ -82,7 +86,7 @@
 }
 
 .team-member__title-wrap--active + .team-member__content {
-  height: 100%;
   overflow: visible;
-  transition: .2s ease-in-out;
+  opacity: 1;
+  transition: .6s;
 }

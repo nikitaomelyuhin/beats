@@ -1,24 +1,27 @@
 ;(function() {
 
-  $(".colors__item-title-wrap").on("click", (e) => {
+  const item = document.querySelectorAll(".colors__item");
+  
+  const text = document.querySelectorAll(".colors__item-text");
+  const title = document.querySelector(".colors__item-title-wrap--theme--grey");
+  
 
-    const $this = $(e.currentTarget);
   
-    $this.next().toggleClass("colors__item-text--active");
-  
-    $(".colors__item-text").not($this.next()).removeClass("colors__item-text--active");
-  
-  });
-  
-  
-    $(".colors__item-title-wrap").on("click", function(e) {
-      if($(window).width() < 480 && $(".colors__item-text").hasClass("colors__item-text--active")) {
-        $(".colors__item").not(this.closest(".colors__item")).css("display", "none");
-      } else {
-        $(".colors__item").css("display", "");
-      }
-  
-  
-    });
 
+  for (let i = 0; i < item.length; i++) {
+    item[i].addEventListener("click", slideFn);
+  }
+
+function slideFn(e) {
+  let btn = e.currentTarget;
+  if (btn.classList.length < 2) {
+    for (let i = 0; i < item.length; i++) {
+      item[i].classList.remove("colors__item--active");
+    }
+    btn.classList.add("colors__item--active");
+  } else {
+    btn.classList.remove("colors__item--active");
+  }
+}
+  
 })()

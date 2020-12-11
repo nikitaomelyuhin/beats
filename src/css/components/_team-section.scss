@@ -1,5 +1,7 @@
 .team-section {
-  min-height: 100%;
+  @include tablets {
+    min-height: 100%;
+  }
 }
 
 .team-section__list--desktop {

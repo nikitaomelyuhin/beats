@@ -1,20 +1,38 @@
 .colors {
   position: absolute;
-  top: 0;
-  right: 0;
   display: flex;
+  justify-content: flex-end;
+  width: 100%;
   height: 100%;
-  margin-left: 40%;
+  right: 0;
+  bottom: 0;
 
-  @include tablets {
-    margin-left: 0;
-    z-index: 3;
-  }
 }
 
 .colors__item {
   display: flex;
+  right: 0;
+  bottom: 0;
+  width: rem(100px);
+  height: 100%;
+  transition: .4s;
+  background-color: rgba(50, 52, 53, .8);
+
+  @include tablets {
+    z-index: 3;
+  }
+  @include phones {
+    width: rem(80px);
+    position: absolute;
+    &:first-child {
+      right: rem(160px);
+    }
+    &:nth-child(2) {
+      right: rem(80px);
+    }
+  }
 }
+
 
 .colors__item-title-wrap {
   height: 100%;
@@ -25,20 +43,19 @@
   flex-shrink: 0;
   cursor: pointer;
   user-select: none;
-  
+
   &--theme--grey {
     background-color: #999;
   }
+
   &--theme--black {
     background-color: #151515;
   }
+
   &--theme--red {
     background-color: $red;
   }
 
-  @include phones {
-    width: rem(80px);
-  }
 }
 
 .colors__item-title {
@@ -48,21 +65,53 @@
   color: #fff;
   font-weight: bold;
   white-space: nowrap;
+  z-index: 2;
 }
 
 
 .colors__item-text {
-  width: 0;
-  overflow: hidden;
-  background-color: rgba(50, 52, 53, .8);
   color: #fff;
   font-size: rem(16px);
+  opacity: 0;
+  width: 0;
 }
 
-.colors__item-text--active {
-  padding: rem(30px) rem(20px);
-  width: 100%;
+
+.colors__item--active {
+  transition: .4s;
+  width: 45%;
+
+  @include tablets {
+    width: 80%;
+  }
 
   @include phones {
+    position: absolute;
+    width: 100%;
+    right: 0;
+    z-index: 1000;
+    &:first-child {
+      right: 0;
+    }
+    &:nth-child(2) {
+      right: 0;
+    }
   }
+
+  .colors__item-title-wrap {
+    @include phones {
+      width: rem(80px);
+    }
+  
+  }
+
+  .colors__item-text {
+    padding: rem(30px) rem(20px);
+    transition: .4s;
+    width: auto;
+    opacity: 1;
+    z-index: 1;
+
+  }
+
 }
